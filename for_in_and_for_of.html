@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> For In and For Of </title>
+</head>
+<body>
+  <script>
+  	  let marcas = ["LG","Samsung","Microsoft","Apple","Acer"];
+
+  	for(let element in marcas) {
+      console.log("FOR IN - "+marcas[element]);
+   }
+
+   console.log('------- for of ------')
+
+   for(let value of marcas){
+   	console.log(`FOR OF - ${value}`);
+   }
+
+   const pessoa = {
+		nome:"Maria",
+		idade:20,
+		peso:65,
+		altura:1.7
+	   }
+
+	   // console.log(pessoa.nome); 
+	   // console.log(pessoa[nome]); // objetos associativos 
+ console.log('-- for in em Objetos --')
+    for(let att in pessoa){
+    	console.log(pessoa[att]);
+    }
+
+    const info = [
+		    {nome: "Robinson", idade: 18},
+		    {nome: "William", idade: 28},
+		    {nome: "Janaina", idade: 19},
+		    {nome: "Carla", idade: 25},
+		    {nome: "Maíra", idade: 32},
+     ];
+
+console.log('for of arrays de objetos'); 
+
+    for(let dado of info){
+    	console.log(dado.nome+" - "+dado.idade);
+    }
+
+// FOR OF é mais indicado para Arrays e FOR IN mais indicado para objetos
+
+let modelos = ["LG","Samsung","Microsoft","Apple","Acer"];
+
+console.log('forEach');
+
+  modelos.forEach(function(intem,indice){
+   console.log(indice,intem);
+  });
+
+  const cadastro = [
+		    {nome: "Robinson", idade: 18},
+		    {nome: "William", idade: 28},
+		    {nome: "Janaina", idade: 19},
+		    {nome: "Carla", idade: 25},
+		    {nome: "Maíra", idade: 32},
+     ];
+
+console.log('forEach em Arrays de Objetos ');
+   cadastro.forEach(function(intem,indice){
+   console.log(indice,intem.nome);
+   console.log(indice,intem.idade);
+  });
+
+
+
+  </script>
+</body>
+</html>
